@@ -1,0 +1,18 @@
+#include<stdio.h>
+#include<stdlib.h>
+
+int main()
+{
+	int num;
+	FILE *fptr;
+	
+	if((fptr = fopen("teste.txt","r")) == NULL){
+		printf("Error! opening file");
+		//Programa sai se o ponteira de arquivo retornar Nulo.
+		exit(1);
+}
+	fscanf(fptr,"%d", &num);
+	printf("Value of n=%d \n", num);
+	fclose(fptr);
+	return 0;
+}
